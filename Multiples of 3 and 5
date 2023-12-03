@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d",&t);
+    while(t--) {
+    unsigned long  int n;
+    scanf("%lu",&n);
+    unsigned long int a = (n-1)/3;
+    unsigned long int b = (n-1)/5;
+    unsigned long int c = (n-1)/15;
+    unsigned long int sum3 = 3*a*(a+1)/2;
+    unsigned long int sum5 = 5*b*(b+1)/2;
+    unsigned long int sum15 = 15*c*(c+1)/2;
+    unsigned long int res = sum3+sum5-sum15;
+    printf("%lu\n",res);
+    }
+    return 0;
+}
