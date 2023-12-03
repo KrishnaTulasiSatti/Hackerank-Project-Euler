@@ -1,0 +1,25 @@
+#include <math.h>
+#include <stdio.h>
+long int fibonacci(long int n) {
+    unsigned long int a = 1 , b = 2 , c = 0;
+    unsigned long int sum = 2;
+    for(long int i = 1;i<=n;i++) {
+        c = a+b;
+        a = b;
+        b = c;
+        if(b>n) break;
+        if(c%2==0) sum+=c;
+    }
+    return sum;
+}
+int main(){
+    int t; 
+    scanf("%d",&t);
+    for(int a0 = 0; a0 < t; a0++){
+        long n; 
+        scanf("%ld",&n);
+       unsigned  long int res = fibonacci(n);
+        printf("%lu\n",res);
+    }
+    return 0;
+}
